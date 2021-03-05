@@ -2,8 +2,11 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://example.org/posts/first_post/</loc><lastmod>2021-02-27T15:52:24&#43;13:00</lastmod></url><url>
-            <loc>http://example.org/</loc><lastmod>2021-02-27T15:52:24&#43;13:00</lastmod></url><url>
-            <loc>http://example.org/posts/</loc><lastmod>2021-02-27T15:52:24&#43;13:00</lastmod></url><url>
-            <loc>http://example.org/categories/</loc></url><url>
-            <loc>http://example.org/tags/</loc></url></urlset>
+            <loc>lgxkevin.com/categories/blog/</loc><lastmod>2021-02-27T15:52:24&#43;13:00</lastmod></url><url>
+            <loc>lgxkevin.com/posts/blog/build-blog-guide/</loc><lastmod>2021-02-27T15:52:24&#43;13:00</lastmod></url><url>
+            <loc>lgxkevin.com/categories/</loc><lastmod>2021-02-27T15:52:24&#43;13:00</lastmod></url><url>
+            <loc>lgxkevin.com/tags/hugo/</loc><lastmod>2021-02-27T15:52:24&#43;13:00</lastmod></url><url>
+            <loc>lgxkevin.com/</loc><lastmod>2021-02-27T15:52:24&#43;13:00</lastmod></url><url>
+            <loc>lgxkevin.com/tags/netlify/</loc><lastmod>2021-02-27T15:52:24&#43;13:00</lastmod></url><url>
+            <loc>lgxkevin.com/posts/</loc><lastmod>2021-02-27T15:52:24&#43;13:00</lastmod></url><url>
+            <loc>lgxkevin.com/tags/</loc><lastmod>2021-02-27T15:52:24&#43;13:00</lastmod></url></urlset>

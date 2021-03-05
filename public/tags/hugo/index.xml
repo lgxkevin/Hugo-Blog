@@ -1,12 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>KLog</title>
-        <link>lgxkevin.com/</link>
-        <description>About LoveIt Theme</description>
+        <title>Hugo - Tag - KLog</title>
+        <link>lgxkevin.com/tags/hugo/</link>
+        <description>Hugo - Tag - KLog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>lgx9587@gmail.com (Kevin)</managingEditor>
-            <webMaster>lgx9587@gmail.com (Kevin)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 27 Feb 2021 15:52:24 &#43;1300</lastBuildDate>
-            <atom:link href="lgxkevin.com/index.xml" rel="self" type="application/rss+xml" />
-        <item>
+            <webMaster>lgx9587@gmail.com (Kevin)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 27 Feb 2021 15:52:24 &#43;1300</lastBuildDate><atom:link href="lgxkevin.com/tags/hugo/" rel="self" type="application/rss+xml" /><item>
     <title>Building a blog with Hugo and Netlify</title>
     <link>lgxkevin.com/posts/blog/build-blog-guide/</link>
     <pubDate>Sat, 27 Feb 2021 15:52:24 &#43;1300</pubDate>

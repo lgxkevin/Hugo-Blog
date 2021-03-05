@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Building a blog with Hugo and Netlify - KLog</title><meta name="Description" content="Build a personal blog with Hugo within an hour."><meta property="og:title" content="Building a blog with Hugo and Netlify" />
+<meta property="og:description" content="Build a personal blog with Hugo within an hour." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="lgxkevin.com/posts/blog/build-blog-guide/" /><meta property="og:image" content="/lgxkevin.com/posts/blog/build-blog-guide/featured-image.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-02-27T15:52:24&#43;13:00" />
+<meta property="article:modified_time" content="2021-02-27T15:52:24&#43;13:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/lgxkevin.com/posts/blog/build-blog-guide/featured-image.jpg"/>
+<meta name="twitter:title" content="Building a blog with Hugo and Netlify"/>
+<meta name="twitter:description" content="Build a personal blog with Hugo within an hour."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="lgxkevin.com/posts/blog/build-blog-guide/" /><link rel="stylesheet" href="/lgxkevin.com/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/lgxkevin.com/css/style.min.css"><link rel="stylesheet" href="/lgxkevin.com/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lgxkevin.com/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Building a blog with Hugo and Netlify",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "lgxkevin.com\/posts\/blog\/build-blog-guide\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "\/lgxkevin.com\/posts\/blog\/build-blog-guide\/featured-image.jpg",
+                            "width":  1600 ,
+                            "height":  900 
+                        }],"genre": "posts","keywords": "Hugo, Netlify","wordcount":  308 ,
+        "url": "lgxkevin.com\/posts\/blog\/build-blog-guide\/","datePublished": "2021-02-27T15:52:24+13:00","dateModified": "2021-02-27T15:52:24+13:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Kevin"},"author": {
+                "@type": "Person",
+                "name": "Kevin"
+            },"description": "Build a personal blog with Hugo within an hour."
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="lgxkevin.com/" title="KLog">KLog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/lgxkevin.com/posts/"> Posts </a><a class="menu-item" href="/lgxkevin.com/tags/"> Tags </a><a class="menu-item" href="/lgxkevin.com/categories/"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="lgxkevin.com/" title="KLog">KLog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/lgxkevin.com/posts/" title="">Posts</a><a class="menu-item" href="/lgxkevin.com/tags/" title="">Tags</a><a class="menu-item" href="/lgxkevin.com/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Building a blog with Hugo and Netlify</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="lgxkevin.com/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kevin</a></span>&nbsp;<span class="post-category">included in <a href="lgxkevin.com/categories/blog/"><i class="far fa-folder fa-fw"></i>Blog</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-02-27">2021-02-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;308 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/lgxkevin.com/svg/loading.min.svg"
+        data-src="/lgxkevin.com/posts/blog/build-blog-guide/featured-image.jpg"
+        data-srcset="/lgxkevin.com/posts/blog/build-blog-guide/featured-image.jpg, /lgxkevin.com/posts/blog/build-blog-guide/featured-image.jpg 1.5x, /lgxkevin.com/posts/blog/build-blog-guide/featured-image.jpg 2x"
+        data-sizes="auto"
+        alt="/lgxkevin.com/posts/blog/build-blog-guide/featured-image.jpg"
+        title="Build a personal blog with Hugo within an hour." /></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#start-with-hugo">Start with Hugo</a>
+      <ul>
+        <li><a href="#step-1-install-hugo">Step 1: Install Hugo</a></li>
+        <li><a href="#step-2-pick-up-a-theme">Step 2: Pick up a theme</a></li>
+        <li><a href="#step-3-hosting-on-netlify">Step 3: Hosting on Netlify</a></li>
+      </ul>
+    </li>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#further-references">Further references</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Build a personal blog with Hugo within an hour.</p>
+<h2 id="start-with-hugo">Start with Hugo</h2>
+<h3 id="step-1-install-hugo">Step 1: Install Hugo</h3>
+<p>On <strong>Windows</strong></p>
+<p>This video is the tutorial I followed to install Hugo on Windows 10.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/G7umPCU-8xc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<div class="details admonition note">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>Summary of steps in video<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><ul>
+<li>Create a new folder under C drive</li>
+<li>Download the zip file from the Hugo repo on Github</li>
+<li>Unzip file under the folder just created</li>
+<li>Set up environment path</li>
+</ul>
+</div>
+        </div>
+    </div>
+<p>On <strong>other</strong> operating systems</p>
+<p>Please follow the guide <a href="https://hugoloveit.com/basic-markdown-syntax/#links" title="Install hugo" target="_blank" rel="noopener noreffer">here</a></p>
+<h3 id="step-2-pick-up-a-theme">Step 2: Pick up a theme</h3>
+<p>This website is using <a href="https://hugoloveit.com/theme-documentation-basics/" title="Theme reference" target="_blank" rel="noopener noreffer">this theme</a></p>
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Main reasons why I choose this theme:<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">😏 Dark theme, programmers' favourite 😉</div>
+        </div>
+    </div>
+<h3 id="step-3-hosting-on-netlify">Step 3: Hosting on Netlify</h3>
+<p>Please click this <a href="https://hugoloveit.com/basic-markdown-syntax/#links" title="Setup with Netlify" target="_blank" rel="noopener noreffer">link</a> to setup Netlify</p>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>Why to use Netlify?<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><ul>
+<li>UI friendly and easy to follow</li>
+<li>Cost efficient, free plan is enough</li>
+<li>Only a few steps to set up Hugo blog</li>
+<li>Easy to set up a custom domain</li>
+</ul>
+</div>
+        </div>
+    </div>
+<h2 id="summary">Summary</h2>
+<p>Some <strong>holes</strong> 🌀 I met when I was building this blog:</p>
+<ul>
+<li>Not all markdown syntax supported in Hugo, such as the collapse list</li>
+<li>Different Hugo themes will have different setup steps, features, and syntax, so there isn&rsquo;t a single way to make all themes work perfectly. Please try two or three theme and pick up the one you are comfortable with.</li>
+<li>Make sure you use the latest Hugo version, some themes and features might not compitiable with old Hugo version.</li>
+</ul>
+<p><strong>Tools</strong> 🔨 check list:</p>
+<ul>
+<li>Hugo &mdash;&gt; Static website framework</li>
+<li>Netlify &mdash;&gt; Hosting and deploying website</li>
+<li>LoveIt &mdash;&gt; Hugo theme</li>
+<li>Visual Stuio code &mdash;&gt; code editor</li>
+<li>Github &mdash;&gt; Code repository</li>
+</ul>
+<p>At the <strong>end</strong> 💡</p>
+<p>The way to build a personal blog website is easy, but keep writing a blog is hard.
+Hope you and especially <strong>me</strong> always remember the reason why we build our blog.</p>
+<h2 id="further-references">Further references</h2>
+<p><a href="https://hugoloveit.com/basic-markdown-syntax/#links" title="Markdown reference" target="_blank" rel="noopener noreffer">Markdown reference</a></p>
+<p><a href="https://hugoloveit.com/theme-documentation-basics/" title="Theme reference" target="_blank" rel="noopener noreffer">Theme reference</a></p>
+<p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-netlify/" title="Host on Netlify" target="_blank" rel="noopener noreffer">Host on Netlify</a></p>
+<p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-netlify/" title="Theme Demo code" target="_blank" rel="noopener noreffer">Theme Demo source code</a></p>
+<p><a href="https://gist.github.com/rxaviers/7360908" title="Emoji cheat sheet" target="_blank" rel="noopener noreffer">Emoji cheat sheet 1</a>
+<a href="https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md" title="Emoji cheat sheet" target="_blank" rel="noopener noreffer">Emoji cheat sheet 2</a></p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-02-27</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="lgxkevin.com/tags/hugo/">Hugo</a>,&nbsp;<a href="lgxkevin.com/tags/netlify/">Netlify</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="lgxkevin.com/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.81.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="lgxkevin.com/" target="_blank">Kevin</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lgxkevin.com/lib/lightgallery/lightgallery.min.css"><script type="text/javascript" src="/lgxkevin.com/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lgxkevin.com/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lgxkevin.com/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lgxkevin.com/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lgxkevin.com/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lgxkevin.com/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lgxkevin.com/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lgxkevin.com/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"}};</script><script type="text/javascript" src="/lgxkevin.com/js/theme.min.js"></script></body>
+</html>
