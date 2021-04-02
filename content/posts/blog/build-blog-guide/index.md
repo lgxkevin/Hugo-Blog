@@ -26,7 +26,7 @@ This video is the tutorial I followed to install Hugo on Windows 10.
 
 {{< youtube G7umPCU-8xc >}}
 
-{{< admonition note "Summary of steps in video" false>}}
+{{< admonition note "Summary of steps in the above video" false>}}
   - Create a new folder under C drive 
   - Download the zip file from the Hugo repo on Github
   - Unzip file under the folder just created
@@ -51,7 +51,7 @@ Please click this [link](https://hugoloveit.com/basic-markdown-syntax/#links "Se
 
 {{< admonition note "Why to use Netlify?" true>}}
 - UI friendly and easy to follow
-- Cost efficient, free plan is enough
+- Cost-efficient, the free plan is enough
 - Only a few steps to set up Hugo blog
 - Easy to set up a custom domain
 {{< /admonition >}}
@@ -61,12 +61,12 @@ Please click this [link](https://hugoloveit.com/basic-markdown-syntax/#links "Se
 Some **holes** :cyclone: I met when I was building this blog:
 
 - Not all markdown syntax supported in Hugo, such as the collapse list
-- Different Hugo themes will have different setup steps, features, and syntax, so there isn't a single way to make all themes work perfectly. Please try two or three theme and pick up the one you are comfortable with.
-- Make sure you use the latest Hugo version, some themes and features might not compitiable with old Hugo version.
+- Different Hugo themes will have different setup steps, features, and syntax, so there isn't a single way to make all themes work perfectly. Please try two or three themes and pick up the one you are comfortable with.
+- Make sure you use the latest Hugo version, some themes and features might not compatible with the old Hugo version.
 
 **Tools** :hammer: check list:
 - Hugo ---> Static website framework
-- Netlify ---> Hosting and deploying website
+- Netlify ---> Hosting and deploying the website
 - LoveIt ---> Hugo theme
 - Visual Stuio code ---> code editor
 - Github ---> Code repository
