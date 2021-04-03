@@ -13,7 +13,12 @@ categories: ["SOLID principle"]
 lightgallery: true
 ---
 
-### Single Responsibility Principle
+> **Youtube** Origin Youtube channel link [here](https://www.youtube.com/watch?v=rtmFCcjEgEw&t=2081s)
+> 
+> **Udemy** Full course on design patterns on .Net [here](https://www.udemy.com/course/design-patterns-csharp-dotnet/)
+
+
+### **S**ingle Responsibility Principle
 - A class should have one, and only one, reason to change
 - A class should only be responsible for one thing.
 - There's a place for everything and everything is in its place
@@ -93,7 +98,7 @@ namespace DotNetDesignPatternDemos.SOLID.SRP
 }
 ```
 
-### Open/Closed Principle
+### **O**pen/Closed Principle
 - An entity should be open for extension but closed for modification.
 - Extend functionality by adding new code instead of changing existing code.
 - Separate the behaviors, so the system can easily be extended, but never broken
@@ -259,6 +264,297 @@ namespace DotNetDesignPatternDemos.SOLID.OCP
       {
         WriteLine($" - {p.Name} is big and blue");
       }
+    }
+  }
+}
+```
+
+### **L**iskov Substitution Principle
+- Any derived class should be able to substitute its parent class without the consumer knowing it.
+- Every class that implements an interface, must be able to substitute any reference throughout tue code that implements 
+that same interface
+- Every part of the code should get the expected result no matter what instance of a class you send to it, given it implements
+the same interface
+
+```C#
+namespace DotNetDesignPatternDemos.SOLID.LiskovSubstitutionPrinciple
+{
+  // using a classic example
+  public class Rectangle
+  {
+    //public int Width { get; set; }
+    //public int Height { get; set; }
+
+    public virtual int Width { get; set; }
+    public virtual int Height { get; set; }
+
+    public Rectangle()
+    {
+      
+    }
+
+    public Rectangle(int width, int height)
+    {
+      Width = width;
+      Height = height;
+    }
+
+    public override string ToString()
+    {
+      return $"{nameof(Width)}: {Width}, {nameof(Height)}: {Height}";
+    }
+  }
+
+  public class Square : Rectangle
+  {
+    //public new int Width
+    //{
+    //  set { base.Width = base.Height = value; }
+    //}
+
+    //public new int Height
+    //{ 
+    //  set { base.Width = base.Height = value; }
+    //}
+
+    public override int Width // nasty side effects
+    {
+      set { base.Width = base.Height = value; }
+    }
+
+    public override int Height
+    { 
+      set { base.Width = base.Height = value; }
+    }
+  }
+
+  public class Demo
+  {
+    static public int Area(Rectangle r) => r.Width * r.Height;
+
+    static void Main(string[] args)
+    {
+      Rectangle rc = new Rectangle(2,3);
+      WriteLine($"{rc} has area {Area(rc)}");
+
+      // should be able to substitute a base type for a subtype
+      /*Square*/ Rectangle sq = new Square();
+      sq.Width = 4;
+      WriteLine($"{sq} has area {Area(sq)}");
+    }
+  }
+}
+```
+
+### **I**nterface Segragation Principle
+- A client should never be forced to depend on methods it doesn't use.
+- Or, a client should never depend on anything more than the method it's calling.
+- Changing one method in a class shouldn't affect classes that don't depend on it.
+- Replace fat interfaces with many small, specific interfaces.
+
+```C#
+namespace DotNetDesignPatternDemos.SOLID.InterfaceSegregationPrinciple
+{
+  public class Document
+  {
+  }
+
+  public interface IMachine
+  {
+    void Print(Document d);
+    void Fax(Document d);
+    void Scan(Document d);
+  }
+
+  // ok if you need a multifunction machine
+  public class MultiFunctionPrinter : IMachine
+  {
+    public void Print(Document d)
+    {
+      //
+    }
+
+    public void Fax(Document d)
+    {
+      //
+    }
+
+    public void Scan(Document d)
+    {
+      //
+    }
+  }
+
+  public class OldFashionedPrinter : IMachine
+  {
+    public void Print(Document d)
+    {
+      // yep
+    }
+
+    public void Fax(Document d)
+    {
+      throw new System.NotImplementedException();
+    }
+
+    public void Scan(Document d)
+    {
+      throw new System.NotImplementedException();
+    }
+  }
+
+  public interface IPrinter
+  {
+    void Print(Document d);
+  }
+
+  public interface IScanner
+  {
+    void Scan(Document d);
+  }
+
+  public class Printer : IPrinter
+  {
+    public void Print(Document d)
+    {
+      
+    }
+  }
+
+  public class Photocopier : IPrinter, IScanner
+  {
+    public void Print(Document d)
+    {
+      throw new System.NotImplementedException();
+    }
+
+    public void Scan(Document d)
+    {
+      throw new System.NotImplementedException();
+    }
+  }
+
+  public interface IMultiFunctionDevice : IPrinter, IScanner //
+  {
+    
+  }
+
+  public struct MultiFunctionMachine : IMultiFunctionDevice
+  {
+    // compose this out of several modules
+    private IPrinter printer;
+    private IScanner scanner;
+
+    public MultiFunctionMachine(IPrinter printer, IScanner scanner)
+    {
+      if (printer == null)
+      {
+        throw new ArgumentNullException(paramName: nameof(printer));
+      }
+      if (scanner == null)
+      {
+        throw new ArgumentNullException(paramName: nameof(scanner));
+      }
+      this.printer = printer;
+      this.scanner = scanner;
+    }
+
+    public void Print(Document d)
+    {
+      printer.Print(d);
+    }
+
+    public void Scan(Document d)
+    {
+      scanner.Scan(d);
+    }
+  }
+}
+```
+### **D**ependency Inversion Principle
+- Never depend on anything concrete, only depend on abstractions.
+- High level modules not depend on low level modules. They should depend on abstractions.
+- Able to change an implementation easily without altering the high level code.
+  
+```C#
+namespace DotNetDesignPatternDemos.SOLID.DependencyInversionPrinciple
+{
+  // hl modules should not depend on low-level; both should depend on abstractions
+  // abstractions should not depend on details; details should depend on abstractions
+
+  public enum Relationship
+  {
+    Parent,
+    Child,
+    Sibling
+  }
+
+  public class Person
+  {
+    public string Name;
+    // public DateTime DateOfBirth;
+  }
+
+  public interface IRelationshipBrowser
+  {
+    IEnumerable<Person> FindAllChildrenOf(string name);
+  }
+
+  public class Relationships : IRelationshipBrowser // low-level
+  {
+    private List<(Person,Relationship,Person)> relations
+      = new List<(Person, Relationship, Person)>();
+
+    public void AddParentAndChild(Person parent, Person child)
+    {
+      relations.Add((parent, Relationship.Parent, child));
+      relations.Add((child, Relationship.Child, parent));
+    }
+
+    public List<(Person, Relationship, Person)> Relations => relations;
+
+    public IEnumerable<Person> FindAllChildrenOf(string name)
+    {
+      return relations
+        .Where(x => x.Item1.Name == name
+                    && x.Item2 == Relationship.Parent).Select(r => r.Item3);
+    }
+  }
+
+  public class Research
+  {
+    public Research(Relationships relationships) 
+    {
+      // high-level: find all of john's children
+      //var relations = relationships.Relations;
+      //foreach (var r in relations
+      //  .Where(x => x.Item1.Name == "John"
+      //              && x.Item2 == Relationship.Parent))
+      //{
+      //  WriteLine($"John has a child called {r.Item3.Name}");
+      //}
+    }
+
+    public Research(IRelationshipBrowser browser) {
+      foreach (var p in browser.FindAllChildrenOf("John"))
+      {
+        WriteLine($"John has a child called {p.Name}");
+      }
+    }
+
+    static void Main(string[] args)
+    {
+      var parent = new Person {Name = "John"};
+      var child1 = new Person {Name = "Chris"};
+      var child2 = new Person {Name = "Matt"};
+
+      // low-level module
+      var relationships = new Relationships();
+      relationships.AddParentAndChild(parent, child1);
+      relationships.AddParentAndChild(parent, child2);
+
+      new Research(relationships);
+      
     }
   }
 }
