@@ -1,7 +1,22 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Tags - Tag - My New Hugo Site</title>
-        <link>http://example.org/tags/</link>
-        <description>Tags - Tag - My New Hugo Site</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /></channel>
+        <title>Tags - Tag - KLog</title>
+        <link>lgxkevin.com/tags/</link>
+        <description>Tags - Tag - KLog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>lgx9587@gmail.com (Kevin)</managingEditor>
+            <webMaster>lgx9587@gmail.com (Kevin)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 27 Feb 2021 15:52:24 &#43;1300</lastBuildDate><atom:link href="lgxkevin.com/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Hugo</title>
+    <link>lgxkevin.com/tags/hugo/</link>
+    <pubDate>Sat, 27 Feb 2021 15:52:24 &#43;1300</pubDate>
+    <author>Author</author>
+    <guid>lgxkevin.com/tags/hugo/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Netlify</title>
+    <link>lgxkevin.com/tags/netlify/</link>
+    <pubDate>Sat, 27 Feb 2021 15:52:24 &#43;1300</pubDate>
+    <author>Author</author>
+    <guid>lgxkevin.com/tags/netlify/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
 </rss>
