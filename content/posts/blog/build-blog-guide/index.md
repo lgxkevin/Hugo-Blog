@@ -1,4 +1,5 @@
 ---
+weight: 2
 title: "Building a blog with Hugo and Netlify"
 date: 2021-02-27T15:52:24+13:00
 draft: false
