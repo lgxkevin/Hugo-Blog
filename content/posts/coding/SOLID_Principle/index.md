@@ -7,7 +7,7 @@ resources:
 - name: "featured-image"
   src: "featured-image.jpg"
 
-tags: ["SOLID", "SOLID principle", "C#"]
+tags: ["SOLID", "SOLID principle", "c-sharp"]
 categories: ["SOLID principle"]
 
 lightgallery: true
