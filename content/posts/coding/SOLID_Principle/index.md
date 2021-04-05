@@ -7,7 +7,7 @@ resources:
 - name: "featured-image"
   src: "featured-image.jpg"
 
-tags: ["SOLID", "SOLID principle", "C#"]
+tags: ["SOLID", "SOLID principle", "c-sharp"]
 categories: ["SOLID principle"]
 
 lightgallery: true
@@ -26,7 +26,7 @@ lightgallery: true
 - Very precise names for small classes > generic names for large classes
 
 
-```C#
+```Csharp
 namespace DotNetDesignPatternDemos.SOLID.SRP
 {
   // just stores a couple of journal entries and ways of
@@ -106,7 +106,7 @@ namespace DotNetDesignPatternDemos.SOLID.SRP
   
 {{< image src="https://lgxkevin-blog.s3.us-east-2.amazonaws.com/SOLID_Principle/OCP.jpg" >}}
 
-```C#
+```Csharp
 namespace DotNetDesignPatternDemos.SOLID.OCP
 {
   public enum Color
@@ -276,7 +276,7 @@ that same interface
 - Every part of the code should get the expected result no matter what instance of a class you send to it, given it implements
 the same interface
 
-```C#
+```Csharp
 namespace DotNetDesignPatternDemos.SOLID.LiskovSubstitutionPrinciple
 {
   // using a classic example
@@ -352,7 +352,7 @@ namespace DotNetDesignPatternDemos.SOLID.LiskovSubstitutionPrinciple
 - Changing one method in a class shouldn't affect classes that don't depend on it.
 - Replace fat interfaces with many small, specific interfaces.
 
-```C#
+```Csharp
 namespace DotNetDesignPatternDemos.SOLID.InterfaceSegregationPrinciple
 {
   public class Document
@@ -476,7 +476,7 @@ namespace DotNetDesignPatternDemos.SOLID.InterfaceSegregationPrinciple
 - High level modules not depend on low level modules. They should depend on abstractions.
 - Able to change an implementation easily without altering the high level code.
   
-```C#
+```Csharp
 namespace DotNetDesignPatternDemos.SOLID.DependencyInversionPrinciple
 {
   // hl modules should not depend on low-level; both should depend on abstractions
